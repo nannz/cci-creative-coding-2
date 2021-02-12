@@ -9,8 +9,7 @@ Theme:
 1. Recognize **YOGA movements** & pose then to create shader -> the mandala / flower / or other natural things
 2. Ocean Protection; create waves and water
 
-
-
+PS: I have this ideas based on my limited knowledge and experience in ML. So open to more advice!!
 
 
 ## Reference
