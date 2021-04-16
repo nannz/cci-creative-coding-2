@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+</head>
+<body>
+    <canvas id = "canvas" width = 400 height = 400></canvas>
+  <div style = "position:absolute;left:420px;top:50px;width:200px"></div>
+     <h2>Classification Explorer</h2>
+     <p>
+      Hold down a number key to add examples of that class. 
+      Explore the decision boundaries that are created by your dataset
+      </p>
+</body>
+<script src="https://www.doc.gold.ac.uk/eavi/rapidmix/RapidLib.js">
+</script>
+<script src = "classification-explorer.js" type = "text/javascript">
+</script>
+<script>
+
+    const updateK = (k)=> {
+      myClassification.setK(0, k);
+      explorer.updateOutput();
+    }
+  
+    const rapidLib = window.RapidLib();
+    const myClassification = new rapidLib.Classification();
+  
+    const demoTrainingSet = [
+        {
+            input: [0,0],
+            output: [0]
+        }
+    ];
+
+    myClassification.train(demoTrainingSet);
+    const explorer = new ClassificationExplorer()
+    explorer.setup("canvas", myClassification)
+    explorer.recording = true;
+    explorer.updateOutput();
+  
+    //updateK(2)
+
+</script>
+</html>
